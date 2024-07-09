@@ -1,0 +1,108 @@
+name: cr_logger
+description: Powerful logging plugin. Supports android, ios and web platforms.
+
+version: 2.4.3
+homepage: https://github.com/Cleveroad/cr_logger
+
+topics:
+  - tool
+  - network
+  - debug
+  - logging
+  - dio
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.16.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  http: ^1.2.1
+
+  # MIT
+  cr_json_widget: ^1.1.1
+
+  # Network
+  # MIT
+  dio: ^5.4.0
+  # MIT
+  chopper: ^7.0.10
+  # MIT
+  logger: ^2.0.2+1
+
+  # BSD
+  package_info_plus: ^8.0.0
+
+  # MIT
+  uuid: ^4.4.0
+
+  # MIT
+  app_settings: ^5.1.1
+
+  # BSD
+  path_provider: ^2.1.2
+  # BSD-3-Clause
+  path: ^1.8.3
+
+  # MIT
+  inspector: ^2.1.0
+
+  # BSD-3-Clause
+  shared_preferences: ^2.2.2
+  # MIT
+  split_view: ^3.2.1
+
+  # unknown
+  # https://pub.dev/packages/synchronized/license
+  synchronized: ^3.1.0
+
+  # BSD-3-Clause
+  js: ^0.6.4
+
+  # BSD-3-Clause
+  # https://stackoverflow.com/a/70757512
+  platform: ^3.1.4
+
+  # Apache-2.0
+  infinite_scroll_pagination: ^4.0.0
+  # MIT
+  worker_manager: ^7.0.2
+
+  # BSD-2-Clause
+  sqflite: ^2.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  # MIT
+#REMOVE
+#  dart_code_metrics: ^5.7.6
+  flutter_lints: ^3.0.1
+
+  build_runner: ^2.4.7
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+
+  fonts:
+    - family: Epilogue
+      fonts:
+        - asset: fonts/Epilogue-Medium.ttf
+        - asset: fonts/Epilogue-Regular.ttf
+
+  plugin:
+    platforms:
+      android:
+        package: com.cleveroad.cr_logger.cr_logger
+        pluginClass: CrLoggerPlugin
+      ios:
+        pluginClass: CrLoggerPlugin
+      web:
+        pluginClass: CrLoggerWeb
+        fileName: cr_logger_web.dart
+
